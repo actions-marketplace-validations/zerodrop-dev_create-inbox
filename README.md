@@ -5,6 +5,7 @@
 No Docker. No SMTP config. No signup required.
 
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-ZeroDrop%20Create%20Inbox-green?logo=github)](https://github.com/marketplace/actions/zerodrop-create-inbox)
+[![Test Action](https://github.com/zerodrop-dev/create-inbox/actions/workflows/test.yml/badge.svg)](https://github.com/zerodrop-dev/create-inbox/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
