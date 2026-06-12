@@ -89,6 +89,25 @@ await page.goto(link);
 
 ---
 
+## Security
+
+The inbox generation runs entirely locally — no network request is made during the Action step. The generated address is a random string; no data leaves the runner until your tests poll the ZeroDrop API.
+
+**Supply chain hardening — pin to a commit SHA:**
+
+```yaml
+# Floating tag (convenient)
+uses: zerodrop-dev/create-inbox@v1
+
+# Pinned to specific commit (recommended for production)
+uses: zerodrop-dev/create-inbox@8706a59  # v1.0.0 initial release
+```
+
+The edge worker that receives and stores emails is fully open source:
+→ [zerodrop-dev/zerodrop-worker](https://github.com/zerodrop-dev/zerodrop-worker)
+
+---
+
 ## Free tier limits
 
 - Shared domain (`zerodrop-sandbox.online`)
@@ -106,20 +125,3 @@ For teams who need custom domains, longer retention, and API keys:
 ## License
 
 MIT
-
-## Security
-
-The inbox generation runs entirely locally — no network request is made during the Action step. The generated address is a random string; no data leaves the runner until your tests poll the ZeroDrop API.
-
-**Supply chain hardening — pin to a commit SHA:**
-
-```yaml
-# Floating tag (convenient)
-uses: zerodrop-dev/create-inbox@v1
-
-# Pinned to specific commit (recommended for production)
-uses: zerodrop-dev/create-inbox@4eb0c06  # v1.0.0
-```
-
-The edge worker that receives and stores emails is fully open source:
-→ [zerodrop-dev/zerodrop-worker](https://github.com/zerodrop-dev/zerodrop-worker)
