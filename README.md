@@ -14,6 +14,8 @@ No Docker. No SMTP config. No signup required.
 
 Generates a disposable `@zerodrop-sandbox.online` inbox as a CI step and exposes it as an output variable. Your tests use the inbox to catch real emails — password resets, magic links, verification codes — without any infrastructure.
 
+Each inbox is isolated per-run — parallel matrix builds work out of the box with zero cross-test contamination.
+
 ```yaml
 - name: Generate test inbox
   id: inbox
