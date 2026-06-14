@@ -84,7 +84,7 @@ const mail = new ZeroDrop();
 // Use the inbox injected by the Action, or generate one locally
 const inbox = process.env.TEST_INBOX ?? mail.generateInbox();
 
-// Register with the inbox, then wait for the verification email
+// waitForLatest uses SSE by default — sub-second delivery in CI
 const email = await mail.waitForLatest(inbox, { timeout: 15000 });
 const link = email.body.match(/https?:\/\/\S+verify\S+/)?.[0];
 await page.goto(link);
