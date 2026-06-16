@@ -2,6 +2,8 @@
 
 > GitHub Action — generate a disposable email inbox for CI testing
 
+**[Documentation](https://docs.zerodrop.dev)** · [GitHub](https://github.com/zerodrop-dev) · [npm](https://npmjs.com/package/zerodrop-client)
+
 No Docker. No SMTP config. No signup required.
 
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-ZeroDrop%20Create%20Inbox-green?logo=github)](https://github.com/marketplace/actions/zerodrop-create-inbox)
